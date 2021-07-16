@@ -1,0 +1,144 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  // color: $color-text;
+
+  @include mq('md') {
+    flex-direction: row;
+    padding-left: 30px;
+    margin-top: 60px;
+  }
+}
+
+.iconGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  width: 100%;
+  height: auto;
+
+  > .userIcon {
+    position: relative;
+
+    .exitBtn {
+      position: absolute;
+      top: 38%;
+      left: 37%;
+    }
+  }
+
+  img {
+    width: 120px;
+    height: auto;
+  }
+
+  a,
+  button {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  @include mq('md') {
+    width: 180px;
+  }
+}
+
+.profileBox {
+  flex: 1;
+  margin: 10px 0 0;
+  color: #666;
+
+  @include mq('md') {
+    margin: 0 0 0 35px;
+  }
+}
+
+.dFlex {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.displayName {
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  color: $color-text;
+  text-align: center;
+
+  @include mq('md') {
+    font-size: 50px;
+    text-align: left;
+  }
+}
+
+.screenName {
+  font-size: 24px;
+  color: $color-text;
+  text-align: center;
+
+  @include mq('md') {
+    text-align: left;
+  }
+}
+
+.bio {
+  margin: 13px 0 0;
+  font-size: 24px;
+  color: $color-text;
+  text-align: center;
+
+  @include mq('md') {
+    text-align: left;
+  }
+}
+
+.since {
+  margin-top: 13px;
+  font-size: 18px;
+  color: $color-text;
+  text-align: center;
+
+  @include mq('md') {
+    text-align: left;
+  }
+}
+
+.userStats {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 10px 0 0;
+  color: $color-text;
+  list-style: none;
+
+  > li {
+    padding: 30px;
+    margin: 2.5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  @include mq('md') {
+    justify-content: flex-start;
+    padding-left: 30px;
+
+    li {
+      margin-left: 10px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.userContents {
+  margin: 20px 0;
+}

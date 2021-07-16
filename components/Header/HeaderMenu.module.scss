@@ -1,0 +1,19 @@
+@import '../../styles/_variables';
+@import '../../styles/mixins';
+
+.drawerWrapper {
+  height: 100%;
+  color: $color-text;
+  background-color: $color-background;
+
+
+  ul > li > a {
+    font-weight: bold;
+    color: $color-text;
+  }
+
+  > ul > li {
+    color: $color-text;
+    background-color: $color-background;
+  }
+}

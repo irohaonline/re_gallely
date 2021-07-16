@@ -1,0 +1,38 @@
+/**
+ * colors
+ */
+
+$color-primary: #aab834;
+$color-primary-variant: #bd8113;
+// $color-primary-variant: #e25f5f;
+
+$color-text: #86b1c1;
+$color-text-diminished: #666;
+
+$color-gray: #9a9a9a;
+
+$color-background: #2e6c83;
+// $color-background: #24236456;
+
+
+/*
+  * theme color of other service
+  */
+$color-twitter: #27a1f3;
+$color-google: #e34133;
+
+/**
+  * layouts
+  */
+$header-height: 70px;
+$footer-height: 40px;
+
+/**
+  * breakpoints
+  */
+$breakpoints: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1080px)',
+  'xl': 'screen and (min-width: 1280px)',
+) !default;

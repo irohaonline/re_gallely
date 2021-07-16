@@ -1,0 +1,14 @@
+.MuiDropzoneArea-root {
+  width: 100% !important;
+  height: 35vh !important;
+  background-color: transparent !important;
+  border: none !important;
+
+  .MuiDropzoneArea-textContainer {
+    padding-top: 20px !important;
+
+    .MuiSvgIcon-root .MuiDropzoneArea-icon {
+      display: none !important;
+    }
+  }
+}

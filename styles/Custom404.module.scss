@@ -1,0 +1,21 @@
+@import '_variables';
+
+.notFound {
+  text-align: center;
+
+  > h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: bold;
+  }
+
+  > p {
+    margin-top: 60px;
+    font-size: 20px;
+    color: $color-text-diminished;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

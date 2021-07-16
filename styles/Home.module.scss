@@ -1,0 +1,135 @@
+.body {
+  font-family: 'Squada One', sans-serif;
+  color: #86b1c1;
+  // background: #000e12;
+}
+
+.bluelight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: table;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+
+  a {
+    display: table-cell;
+    font-size: 3em;
+    color: #daf6ff;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 20px #86b1c1, 0 0 20px rgba(10, 175, 230, 0);
+    vertical-align: middle;
+    background-image: radial-gradient(
+      center,
+      ellipse cover,
+      rgba(10, 175, 230, 0) 0%,
+      rgba(10, 175, 230, 0) 90%
+    );
+    border: 0 dotted rgba(10, 175, 230, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(10, 175, 230, 0), inset 0 0 0 rgba(10, 175, 230, 0);
+    transition: background 1s,
+      border-width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), text-shadow 0.5s;
+
+    &:hover {
+      color: #86b1c1;
+      text-shadow: 0 0 50px #86b1c1,
+        0 0 50px #86b1c1;
+      background-image: radial-gradient(
+        center,
+        ellipse cover,
+        rgba(10, 175, 230, 0.3) 0%,
+        rgba(10, 175, 230, 0) 60%
+      );
+    }
+  }
+
+  &::before,
+  &::after,
+  a::before,
+  a::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: '';
+    border: 60px dashed transparent;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    z-index: -1;
+    width: 180%;
+    height: 180%;
+    border: 3px dotted rgba(10, 175, 230, 0);
+    animation: rotate 20s linear 0s infinite;
+  }
+
+  &::after {
+    z-index: -2;
+    width: 160%;
+    height: 160%;
+    border: 80px dashed rgba(10, 175, 230, 0);
+    animation: rotate 10s linear 0s infinite reverse;
+  }
+
+  a {
+    &::before {
+      width: 120%;
+      height: 120%;
+      border: 50px dashed rgba(10, 175, 230, 0);
+      animation: rotate 5s ease-in-out 0s infinite alternate;
+    }
+
+    &::after {
+      width: 120%;
+      height: 120%;
+      border: 18px dashed rgba(10, 175, 230, 0);
+      animation: rotate 5s linear 0s infinite;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: rgba(10, 175, 230, 0.3);
+    }
+
+    &::after {
+      border-color: rgba(10, 175, 230, 0.1);
+    }
+
+    a {
+      &::before {
+        border-color: rgba(10, 175, 230, 0.3);
+      }
+
+      &::after {
+        border-color: rgba(10, 175, 230, 0.3);
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+p.caption {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.7em;
+  text-align: center;
+  text-shadow: 0 0 20px #86b1c1, 0 0 20px rgba(10, 175, 230, 0);
+  letter-spacing: 0.2em;
+}

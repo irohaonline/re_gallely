@@ -1,0 +1,30 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 380px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: #333;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 5px 8px 0 rgb(0 0 0 / 14%),
+    0 1px 14px 0 rgb(0 0 0 / 12%);
+
+  a.imgHolder {
+    display: block;
+    height: 200px;
+
+    > img {
+      height: 100%;
+    }
+  }
+
+  .visitBtn {
+    width: 80px;
+  }
+}

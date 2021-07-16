@@ -1,0 +1,185 @@
+@import './_variables';
+
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+    メイリオ, Meiryo, sans-serif;
+  color: $color-text;
+  background-color: $color-background;
+}
+
+//buttonの初期化
+button {
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//コンテナに相当するエリア
+$header: 80px;
+$footer: 248px;
+
+.app_container {
+  height: calc(100vh - #{$header} - #{$footer});
+}
+
+.container {
+  width: calc(100% - 2rem);
+  max-width: 1024px;
+  height: auto;
+  padding: 1rem;
+  margin: 50 auto;
+}
+
+.h_100vh {
+  width: 100%;
+  height: 100vh;
+}
+
+.w_100 {
+  width: 100%;
+}
+
+//section
+.section-wrapin {
+  position: relative;
+  width: 100%;
+  max-width: 575px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+//要素の真ん中よせ
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.center_center {
+  margin: auto;
+}
+
+//virtical spacer
+.module-spacer--extra-small {
+  height: 12px;
+}
+
+.module-spacer--small {
+  height: 20px;
+}
+
+.module-spacer--medium {
+  height: 32px;
+}
+
+.module-spacer--40px {
+  height: 40px;
+}
+
+.module-spacer--80px {
+  height: 80px;
+}
+
+//image
+.thumbnail_cover {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+}
+
+.thumbnail_cover::before {
+  display: block;
+  padding-top: 100%;
+  content: '';
+}
+
+.thumbnail_cover > img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+//height
+.h_100vh {
+  height: 100vh;
+}
+
+/* ここからボタンのstyle　*/
+
+.btnAnimation02 {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  padding: 5px 12px;
+  font-size: 8px;
+  font-weight: bold;
+  color: $color-text;
+  text-align: center;
+  text-decoration: none;
+  // background-color: #86b1c1;
+  border: $color-text;
+  border-radius: 15px;
+}
+
+.btnAnimation02 span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnAnimation02::before,
+.btnAnimation02::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: '';
+  background-color: #2e6c83;
+  transition: 0.2s;
+}
+
+.btnAnimation02::before {
+  left: 0;
+}
+
+.btnAnimation02::after {
+  right: 0;
+}
+
+.btnAnimation02:hover::before,
+.btnAnimation02:hover::after {
+  width: 0;
+  background-color: #2e6c83;
+}
+
+.btnAnimation02:hover {
+  color: #2e6c83;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 576px) {
+  .section-wrapin {
+    max-width: 1024px;
+  }
+}
